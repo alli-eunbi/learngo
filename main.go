@@ -1,12 +1,11 @@
 package main
 
-import(
+import (
 	"fmt"
-
-	
+	"main/something"
 )
 
 func main(){
- fmt.Println("Hello")
- test.SayHello()
+	fmt.Println("hello")
+	something.SayHello()
 }
