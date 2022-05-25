@@ -13,6 +13,11 @@ func allNameLen(name ...string){
 	fmt.Println(name)
 }
 
+func nakedReturn(name string) (nameLen int){
+	defer fmt.Println("done")
+	nameLen = len(name)
+	return
+}
 
 func main(){
 	something.SayHello()
@@ -22,4 +27,6 @@ func main(){
 	name, _:= nameLen("alli")
 	fmt.Println(name)
 	allNameLen("alli", "cj", "jerry", "eunbi")
+
+	fmt.Println(nakedReturn("alli"))
 }
