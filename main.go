@@ -19,10 +19,21 @@ func nakedReturn(name string) (nameLen int){
 }
 
 func forArray(numbers ...int)(number int){
-	for _, n := range numbers{
-		number += n
+	// for _, n := range numbers{
+	// 	number += n
+	// }
+
+	for i:=0; i<len(numbers); i++{
+		number += numbers[i]
 	}
 	return 
+}
+
+func areYouRich(money int) bool{
+	if koreanMoney := money*1200 ; koreanMoney> 8000 {
+		return true
+	}
+	return false
 }
 
 func main(){
@@ -37,4 +48,6 @@ func main(){
 	// fmt.Println(nakedReturn("alli"))
 
 	fmt.Println(forArray(1,2,3))
+	
+	fmt.Println(areYouRich(6000))
 }
