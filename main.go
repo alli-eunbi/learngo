@@ -36,6 +36,25 @@ func areYouRich(money int) bool{
 	return false
 }
 
+func switchCases(money int)bool{
+	switch koreanMoney := money*1200; {
+	case koreanMoney > 80000 : 
+		return true
+	
+	default: 
+		return false
+	}
+}
+
+func pointer(num int) (int, int, *int,int){
+	a := num
+	b := a
+	c := &a
+	d := *&a
+	return a, b, c, d
+}
+
+
 func main(){
 	// something.SayHello()
 	// num := 1
@@ -44,10 +63,11 @@ func main(){
 	// name, _:= nameLen("alli")
 	// fmt.Println(name)
 	// allNameLen("alli", "cj", "jerry", "eunbi")
-
 	// fmt.Println(nakedReturn("alli"))
-
-	fmt.Println(forArray(1,2,3))
+	// fmt.Println(forArray(1,2,3))
+	// fmt.Println(areYouRich(6000))
+	// fmt.Println(switchCases(20))
 	
-	fmt.Println(areYouRich(6000))
+	fmt.Println(pointer(1))
+
 }
