@@ -76,6 +76,17 @@ func mapOrStruct(name string, phoneNumber int, married bool)(map[string]string, 
 }
 
 
+type Example struct {
+	name string
+	number int
+}
+
+func exampleMake(arg *Example) {
+	arg.name = "ex"
+	arg.number=1
+}
+
+
 func main(){
 	// something.SayHello()
 	// num := 1
@@ -90,7 +101,10 @@ func main(){
 	// fmt.Println(switchCases(20))
 	//fmt.Println(pointer(1))
 	// fmt.Println(array(1,2,3))
+	// fmt.Println(mapOrStruct("alli", 1234, false))
 
-	fmt.Println(mapOrStruct("alli", 1234, false))
+	var example1 Example
+	fmt.Println(exampleMake(&example1))
+
 
 }
