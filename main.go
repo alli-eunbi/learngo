@@ -81,11 +81,23 @@ type Example struct {
 	number int
 }
 
-func exampleMake(arg *Example) {
+func exampleMake(arg *Example){
+	fmt.Println(arg)
 	arg.name = "ex"
 	arg.number=1
 }
 
+func exampleWrongMake(arg Example) Example{
+	arg.name = "ex"
+	arg.number=1
+
+	return arg
+}
+
+func Byunsoo(arg int) (int){
+	arg = 3
+	return arg
+}
 
 func main(){
 	// something.SayHello()
@@ -103,8 +115,16 @@ func main(){
 	// fmt.Println(array(1,2,3))
 	// fmt.Println(mapOrStruct("alli", 1234, false))
 
-	var example1 Example
-	fmt.Println(exampleMake(&example1))
+	var ex1 = Example{}
+	exampleMake(&ex1)
+	fmt.Println(ex1)
 
+	var ex2 = Example{}
+	var ex3 = exampleWrongMake(ex2)
+	fmt.Println(ex3)
+
+	d :=2
+	c := Byunsoo(d)
+	fmt.Println(c)
 
 }
