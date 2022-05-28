@@ -6,6 +6,6 @@ type Account struct {
 }
 
 func AccountCreate(name string){
-	
+	Account.name = name
 }
 
