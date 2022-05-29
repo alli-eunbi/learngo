@@ -120,4 +120,6 @@ func main(){
 	// fmt.Println(ex3)
 
 
+	account := accounts.NewAccount("Nico")
+	account.Deposit(10)
 }
